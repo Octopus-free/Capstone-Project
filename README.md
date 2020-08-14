@@ -18,7 +18,6 @@
   - [Challenges](#challenges)
 - [Files](#files)
 - [Software Requirements](#sw_reqs)
-- [References](#refs)
 - [Acknowledgement](#ack)
 
 ***
@@ -64,4 +63,7 @@ evaluate our model.
 The shape of the dataset is 286500 rows and 18 columns.
 Initial dataset has null values in some columns.
 
- <img src="./images/null_values.png" alt="level_dist">
+ <img src="./images/null_values.png">
+
+We can see that columns 'firstName' and 'LastName' have 8346 null values. Furthermore, the column 'userAgent' includes the 8346 null values too. Nevertheless, the column 'userId' has not null values. We have to check the column 'userId' on invalid data, like an empty row.
+
