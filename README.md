@@ -61,4 +61,7 @@ evaluate our model.
 
 ### Data Exploration
 
-The shape of the dataser is 286500 rows and 18 columns.
+The shape of the dataset is 286500 rows and 18 columns.
+Initial dataset has null values in some columns.
+
+ <img src="./images/null_values.png" alt="level_dist">
