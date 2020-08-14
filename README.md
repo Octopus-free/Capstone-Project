@@ -47,9 +47,18 @@ The case solvation consists of:
 
 ### Metrics
 
-The dataser has only  **225** unique users, **only 52** churned **(23.5%).**
+The dataser has only 225 unique users, 52 of them churned.
 The dataset is unbalanced.
 If we use accuracy to evaluate a model we will run into a case that
 all predictions are churn or not churn.
-. We have to use **F1-Score** to
+. We have to use F1-Score to
 evaluate our model.
+<a id="analysis"></a>
+
+## II. Analysis
+
+<a id="explore"></a>
+
+### Data Exploration
+
+The shape of the dataser is 286500 rows and 18 columns.
