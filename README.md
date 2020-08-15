@@ -107,6 +107,17 @@ We have to explore dataframe columns.
 And the first task is to determine target to predict.
 Column 'page' have this information.
 
-<img src="./images/page_values.png">
+<img src="./images/page_values.png" width="30%">
 
+The visiting counts of the 'Cancel' and 'Cancellation Confirmation' are 52. These rows contain the information about churned users.
+
+<a id="files"></a>
+
+## V. Files
+
+1. Folders 'images' consist of the images that you saw above.
+   
+2. The file mini_sparkify_event_data.json is our initial dataset.
+    
+3. The file Sparkify.ipynb is a jupyter notebook with full project's code.
 
