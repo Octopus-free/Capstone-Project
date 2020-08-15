@@ -8,9 +8,9 @@
   - [Metrics](#metrics)
 - [Analysis](#analysis)
   - [Data Exploration](#explore)
-  - [Data Visualisation](#data_viz)
+  - [Data Visualisation](#visualisation)
 - [Methodology](#method)
-  - [Data Preprocessing](#data_prep)
+  - [Data Preprocessing](#preprocessing)
   - [Implementation](#implement)
   - [Refinement](#refine)
 - [Conclusion](#conclusion)
@@ -61,23 +61,6 @@ evaluate our model.
 ### Data Exploration
 
 The shape of the dataset is 286500 rows and 18 columns.
-Initial dataset has null values in some columns.
-
- <img src="./images/null_values.png">
-
-We can see that columns 'firstName' and 'LastName' have 8346 null values. Furthermore, the column 'userAgent' includes the 8346 null values too. Nevertheless, the column 'userId' has not null values. We have to check the column 'userId' on invalid data, like an empty row.
-
-An empty row looks like:
-
- <img src="./images/typical_row_with_null.png" width="50%">
- 
- We can see the 'Logged Out' value in the 'auth' column where the 'userId' column value is an empty row.
-What the values does the 'auth' column include, except 'Logged Out'?
-
-<img src="./images/row_with_empty_userid.png" width="50%">
-
-The plot show us that the 'auth' column consists of the 'Logged Out' and the 'Guest' values.
-We can drop all rows with the 'Logged Out' and the 'Guest' values due to these rows are the audit records and have not the information about a user churn or any user activity.
 
 The filled row shows:
 
@@ -110,6 +93,63 @@ Column 'page' have this information.
 <img src="./images/page_values.png" width="30%">
 
 The visiting counts of the 'Cancel' and 'Cancellation Confirmation' are 52. These rows contain the information about churned users.
+
+<a id="visualisation"></a>
+
+### Data Visualisation
+
+All plots you can see at the appropriate part of a jupyter notebook.
+
+<a id="method"></a>
+
+## III. Methodology
+
+<a id="preprocessing"></a>
+
+### Data Preprocessing
+
+1. Handling null values
+
+Initial dataset has null values in some columns.
+
+ <img src="./images/null_values.png">
+
+We can see that columns 'firstName' and 'LastName' have 8346 null values. Furthermore, the column 'userAgent' includes the 8346 null values too. Nevertheless, the column 'userId' has not null values. We have to check the column 'userId' on invalid data, like an empty row.
+
+An empty row looks like:
+
+ <img src="./images/typical_row_with_null.png" width="50%">
+ 
+ We can see the 'Logged Out' value in the 'auth' column where the 'userId' column value is an empty row.
+What the values does the 'auth' column include, except 'Logged Out'?
+
+<img src="./images/row_with_empty_userid.png" width="50%">
+
+The plot show us that the 'auth' column consists of the 'Logged Out' and the 'Guest' values.
+We can drop all rows with the 'Logged Out' and the 'Guest' values due to these rows are the audit records and have not the information about a user churn or any user activity.
+
+<a id="implement"></a>
+
+### Implementation
+
+We have the same training and testing features for all the models. PySpark's ML
+[library](https://spark.apache.org//docs/latest/api/python/pyspark.ml.html)(`pyspark.ml`) has access to the most common machine learning classification
+algorithms. Others are still in development, like
+[Tree Predictions in Gradient Boosting to Improve Prediction Accuracy](https://issues.apache.org/jira/browse/SPARK-4240).
+
+The ones which we'll be using are:
+
+- [Logistic Regression](#ref_lr)
+- [Random Forest Classifier](#ref_rf)
+- [Gradient Boosting Trees](#ref_gbt)
+
+<a id="refine"></a>
+
+### Refinement
+
+Since the class distribution is highly imbalanced, we will perform random
+undersampling to optimize our **F1 score**.
+
 
 <a id="files"></a>
 
