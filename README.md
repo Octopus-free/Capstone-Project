@@ -15,6 +15,7 @@
   - [Refinement](#refine)
 - [Conclusion](#conclusion)
   - [Reflection](#reflect)
+  - [Improvement](#improvement)
   - [Challenges](#challenges)
 - [Files](#files)
 - [Software Requirements](#requirements)
@@ -174,6 +175,11 @@ I had to transform the project's data to dataset with unique user's records.
 The second problem was the most dataset columns was not a feature columns. These columns included records that described user's sessions and actions.
 And I wrangled the data and aggregeted it.
 
+<a id="improvement"></a>
+
+### Improvement
+
+To improve a f1 score we should to perform the data to balanced dataset. We can use undersampling or oversampling methods.
 
 <a id="challenges"></a>
 
