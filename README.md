@@ -134,12 +134,12 @@ The remained rows with null values we can not drop due to they have information 
 
 ### Implementation
 
-[PySpark's ML](https://spark.apache.org//docs/latest/api/python/pyspark.ml.html)(`pyspark.ml`) has the most common machine learning classification
+[PySpark's MLlib](https://spark.apache.org//docs/latest/api/python/pyspark.ml.html) has the most common machine learning classification
 algorithms. 
 In the project we are using three of them:
-- [Random Forest Classifier](#ref_rf)
-- [Logistic Regression](#ref_lr)
-- [Gradient Boosting Trees](#ref_gbt)
+- [Random Forest Classifier](#https://spark.apache.org/docs/latest/ml-classification-regression.html#random-forest-classifier)
+- [Logistic Regression](#https://spark.apache.org/docs/latest/ml-classification-regression.html#logistic-regression)
+- [Gradient Boosting Trees](#rhttps://spark.apache.org/docs/latest/ml-classification-regression.html#gradient-boosted-tree-classifier)
 
 <a id="refine"></a>
 
