@@ -15,6 +15,8 @@
   - [Refinement](#refine)
 - [Conclusion](#conclusion)
   - [Reflection](#reflect)
+  - [Model Evaluation and Validation](#evaluation)
+  - [Justification](#justification)
   - [Improvement](#improvement)
   - [Challenges](#challenges)
 - [Files](#files)
@@ -42,6 +44,13 @@ The project's full dataset is 12GB, of which you can analyze a mini subset is 12
 The case solvation consists of:
 - determine target to predict based on the information in 18th feature columns;
 - predict users churn.
+
+We should explore each dataset's column and find information about users decisions of churn. To perform this task we could select and aggregate the data from each column to determine which column consist of user's action to churn or not churn.
+
+Finally, we have to create a column in the dataset that included information about user churn ('1') or not churn ('0') based on user's action in the dataset.
+
+
+
 
 <a id="metrics"></a>
 
@@ -154,11 +163,25 @@ In the project we are using three of them:
 - [Logistic Regression](https://spark.apache.org/docs/latest/ml-classification-regression.html#logistic-regression)
 - [Gradient Boosting Trees](https://spark.apache.org/docs/latest/ml-classification-regression.html#gradient-boosted-tree-classifier)
 
+Firstly, I used all three algoriths with parameters by defalut.
+In all cases, F1-score did not exceed 0.5.
+I tried to change algoritms parameters. Ыo as not to iterate over the parameters manually, I read the Spark documentation of appropriated algoritms and tuned the parameters using ParamGridBuilder class.
+For the Random Forest model, I changed the parameters 'impurity', 'maxDepth'. 
+
+For the Logistic Regression, I varied the parameters 'elasticNetParam', 'regParam', 'maxIter', I altered the parameters 'maxIter', 'maxDepth'.
+
+For the Gradient Boosting Trees, I altered the parameters 'maxIter', 'maxDepth'.
+
+I have not experienced any difficulties with setting the parameters.
+
 <a id="refine"></a>
 
 ### Refinement
 
-To improve used algorithms we can implement ParamGridBuilder and CrossValidator classes. One allow us to select the best parameters of our models, another to perform a validation process.
+To improve used algorithms we can implement ParamGridBuilder and CrossValidator classes. One allow us to select the best parameters of our models, another to perform a validation process. I was finding parameters values which gave the best indicator F1-score.
+Final parameters on each model determinated as the best parameters defined by ParamGridBuilder class.
+
+F1-score was on average 0.2 less
 
 <a id="conclusion"></a>
 
@@ -174,6 +197,36 @@ I had to transform the project's data to dataset with unique user's records.
 
 The second problem was the most dataset columns was not a feature columns. These columns included records that described user's sessions and actions.
 And I wrangled the data and aggregated it.
+
+
+
+<a id="evaluation"></a>
+
+### Evaluation
+
+Random Forest model gives the best F1-score: 0.87.
+
+Logistic Regression model take the second place with F1-score: 0.8.
+
+Gradient-boosted tree is the worst model for the project, F1-score: 0.7.
+
+We have only 225 rows in the dataset. It is too little to argue that the models gave the best results and no further configuration required.
+
+ On the other hand, we got F1-score more over 0.8. I think that this is an acceptable result for the small dataset.
+
+
+<a id="justification"></a>
+
+### Justification
+
+In this project, I implemented a model to predict users churn for Sparkify music streaming service. 
+
+I explored the data  to create features and unique users records  for the creating and evaluating the models. 
+
+I evaluated 3 models: Random Forest (RF), Logistic Regression (LR), Gradient Boosted Trees (GBT).
+
+I achived improving value of F1-score for all models by 0.2.
+
 
 <a id="improvement"></a>
 
