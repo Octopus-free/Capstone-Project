@@ -140,9 +140,7 @@ Each user has different count of listened song, completed sessions. We should cr
 
 The second part users activity are the visited pages. As we saw earlier the users did not cancel a subscription visited more times the pages 'Add Friend', 'Add to Playlist', 'Save Settings', 'Submit Upgrade', 'Thumbs Up'. We can create some columns to store information about users activity on the pages.
 
-Firstly, we create several pandas dataframes with count of visited pages. Secondly, we create the columns with agregated data in the spark dataframe. Thirdly, we recreate the spark dataframe and drop columns with raw categoric
-
-
+Firstly, we create several pandas dataframes with count of visited pages. Secondly, we create the columns with agregated data in the spark dataframe. Thirdly, we recreate the spark dataframe and drop columns with raw categorical features.
 
 <a id="implement"></a>
 
@@ -159,8 +157,7 @@ In the project we are using three of them:
 
 ### Refinement
 
-Since the class distribution is highly imbalanced, we will perform random
-undersampling to optimize our **F1 score**.
+To improve used algorithms we can implement ParamGridBuilder and CrossValidator classes. One allow us to select the best parameters of our models, another to perform a validation process.
 
 ## IV. Conclusion
 
@@ -168,6 +165,11 @@ undersampling to optimize our **F1 score**.
 
 ### Reflection
 
+The hardest part of the project was a prerpocessing the dataset. I was wandered that the initial dataset had not been a 'dataset'. It was not a spread of some features. The initial dataset was a part of log file that consisted users actifity.
+
+I had to transform the project's data to dataset with unique user's records.
+
+The second problem was the dataset columns 
 I enjoyed the data pre-processing part of the project. For data visualisation part, instead of using “for” loops to get arrays for our bar chart, I first converted our Spark data frame to Pandas data frame using toPandas()method. Data visualisation is easier from then on.
 
 The shape of our final data is just 225 x 32. This is too small to generalise our model. Just 225 users for a streaming company? That’s nothing. 12 GB data might provide some useful results. If you want more statistically significant results then I suggest you run this notebook on Amazon EMR for the 12 GB dataset. I have skipped that part for now because it costs $30 for one week.
