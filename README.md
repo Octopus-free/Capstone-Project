@@ -17,8 +17,8 @@
   - [Reflection](#reflect)
   - [Challenges](#challenges)
 - [Files](#files)
-- [Software Requirements](#sw_reqs)
-- [Acknowledgement](#ack)
+- [Software Requirements](#requirement)
+- [Acknowledgement](#acknowledgements)
 
 ***
 
@@ -194,3 +194,15 @@ The challenges which I run into in the project was:
 
 2. The file Sparkify.ipynb is a jupyter notebook with full project's code.
 
+<a id="requirements"></a>
+
+## VI. Software Requirements
+
+This project uses Python 3.6.5 and Spark, Pandas.
+
+
+<a id="acknowledgements"></a>
+
+## VIII. Acknowledgements
+
+Thanks to **Udacity** for providing such a project to work on. 
