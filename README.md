@@ -128,6 +128,8 @@ What the values does the 'auth' column include, except 'Logged Out'?
 The plot show us that the 'auth' column consists of the 'Logged Out' and the 'Guest' values.
 We can drop all rows with the 'Logged Out' and the 'Guest' values due to these rows are the audit records and have not the information about a user churn or any user activity.
 
+The remained rows with null values we can not drop due to they have information to predict users churn.
+
 <a id="implement"></a>
 
 ### Implementation
