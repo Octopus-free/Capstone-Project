@@ -162,6 +162,28 @@ In the project we are using three of them:
 Since the class distribution is highly imbalanced, we will perform random
 undersampling to optimize our **F1 score**.
 
+## IV. Conclusion
+
+<a id="reflect"></a>
+
+### Reflection
+
+I enjoyed the data pre-processing part of the project. For data visualisation part, instead of using “for” loops to get arrays for our bar chart, I first converted our Spark data frame to Pandas data frame using toPandas()method. Data visualisation is easier from then on.
+
+The shape of our final data is just 225 x 32. This is too small to generalise our model. Just 225 users for a streaming company? That’s nothing. 12 GB data might provide some useful results. If you want more statistically significant results then I suggest you run this notebook on Amazon EMR for the 12 GB dataset. I have skipped that part for now because it costs $30 for one week.
+
+<a id="challenges"></a>
+
+### Challenges
+
+Some of the challenges which I faced in this project are:
+
+- Official documentation of PySpark as compared to Pandas
+- For the sake of mastering Spark, we only used the most common machine learning
+  classification models instead of using the advanced ones
+- Highly imbalanced data led to a poor F1 score
+- If you run this notebook on your local machine without any change, then it
+  will take around an hour to run completely
 
 <a id="files"></a>
 
