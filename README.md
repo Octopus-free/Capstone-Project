@@ -169,10 +169,9 @@ The hardest part of the project was a prerpocessing the dataset. I was wandered 
 
 I had to transform the project's data to dataset with unique user's records.
 
-The second problem was the dataset columns 
-I enjoyed the data pre-processing part of the project. For data visualisation part, instead of using “for” loops to get arrays for our bar chart, I first converted our Spark data frame to Pandas data frame using toPandas()method. Data visualisation is easier from then on.
+The second problem was the most dataset columns was not a feature columns. These columns included records that described user's sessions and actions.
+And I wrangled the data and aggregeted it.
 
-The shape of our final data is just 225 x 32. This is too small to generalise our model. Just 225 users for a streaming company? That’s nothing. 12 GB data might provide some useful results. If you want more statistically significant results then I suggest you run this notebook on Amazon EMR for the 12 GB dataset. I have skipped that part for now because it costs $30 for one week.
 
 <a id="challenges"></a>
 
