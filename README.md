@@ -202,7 +202,7 @@ And I wrangled the data and aggregated it.
 
 <a id="evaluation"></a>
 
-### Evaluation
+### Model Evaluation and Validation
 
 Random Forest model gives the best F1-score: 0.87.
 
