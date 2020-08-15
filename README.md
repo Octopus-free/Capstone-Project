@@ -173,7 +173,7 @@ The hardest part of the project was a prerpocessing the dataset. I was wandered 
 I had to transform the project's data to dataset with unique user's records.
 
 The second problem was the most dataset columns was not a feature columns. These columns included records that described user's sessions and actions.
-And I wrangled the data and aggregeted it.
+And I wrangled the data and aggregated it.
 
 <a id="improvement"></a>
 
@@ -211,4 +211,4 @@ This project uses Python 3.6.5 and Spark, Pandas.
 
 ## VII. Acknowledgements
 
-Thanks to **Udacity** for providing such a project to work on. 
+Thanks to Udacity for providing such a project to improve my Data Science skills.
