@@ -102,5 +102,11 @@ We can see the 18th columns in the dataframe and we have to determine which colu
 * ts - a user session timestamp;
 * userAgent - a user browser type;
 * userId - a user registration identificatior.
+
 We have to explore dataframe columns.
+And the first task is to determine target to predict.
+Column 'page' have this information.
+
+<img src="./images/page_values.png">
+
 
