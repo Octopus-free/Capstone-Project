@@ -159,6 +159,8 @@ In the project we are using three of them:
 
 To improve used algorithms we can implement ParamGridBuilder and CrossValidator classes. One allow us to select the best parameters of our models, another to perform a validation process.
 
+<a id="conclusion"></a>
+
 ## IV. Conclusion
 
 <a id="reflect"></a>
@@ -177,22 +179,18 @@ And I wrangled the data and aggregeted it.
 
 ### Challenges
 
-Some of the challenges which I faced in this project are:
+The challenges which I run into in the project was:
 
-- Official documentation of PySpark as compared to Pandas
-- For the sake of mastering Spark, we only used the most common machine learning
-  classification models instead of using the advanced ones
-- Highly imbalanced data led to a poor F1 score
-- If you run this notebook on your local machine without any change, then it
-  will take around an hour to run completely
+- Spark documentation is not so good as compared to Pandas  or Scikit-learn;
+- Spark implements only the most common machine learning  classification models instead of Scikit-learn;
+- Umbalanced project's data lead to to a lower F1 score.
+
 
 <a id="files"></a>
 
 ## V. Files
 
 1. Folders 'images' consist of the images that you saw above.
-   
-2. The file mini_sparkify_event_data.json is our initial dataset.
-    
-3. The file Sparkify.ipynb is a jupyter notebook with full project's code.
+
+2. The file Sparkify.ipynb is a jupyter notebook with full project's code.
 
