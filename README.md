@@ -153,7 +153,7 @@ algorithms.
 In the project we are using three of them:
 - [Random Forest Classifier](https://spark.apache.org/docs/latest/ml-classification-regression.html#random-forest-classifier)
 - [Logistic Regression](https://spark.apache.org/docs/latest/ml-classification-regression.html#logistic-regression)
-- [Gradient Boosting Trees](rhttps://spark.apache.org/docs/latest/ml-classification-regression.html#gradient-boosted-tree-classifier)
+- [Gradient Boosting Trees](https://spark.apache.org/docs/latest/ml-classification-regression.html#gradient-boosted-tree-classifier)
 
 <a id="refine"></a>
 
