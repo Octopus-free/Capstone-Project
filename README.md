@@ -108,7 +108,7 @@ All plots you can see at the appropriate part of a jupyter notebook.
 
 ### Data Preprocessing
 
-1. Handling null values
+1. Handling null values.
 
 Initial dataset has null values in some columns.
 
@@ -130,6 +130,20 @@ We can drop all rows with the 'Logged Out' and the 'Guest' values due to these r
 
 The remained rows with null values we can not drop due to they have information to predict users churn.
 
+2. Categorical features handling.
+
+Some columns in tha dataset have categorical values. We have to change them to '0' and '1' values using 'dummy' columns.
+
+3. Numerical features.
+
+Each user has different count of listened song, completed sessions. We should create columns contained of users listened songs and completed sessions. These columns describe the users activity. We can call the columns as the first part users activity.
+
+The second part users activity are the visited pages. As we saw earlier the users did not cancel a subscription visited more times the pages 'Add Friend', 'Add to Playlist', 'Save Settings', 'Submit Upgrade', 'Thumbs Up'. We can create some columns to store information about users activity on the pages.
+
+Firstly, we create several pandas dataframes with count of visited pages. Secondly, we create the columns with agregated data in the spark dataframe. Thirdly, we recreate the spark dataframe and drop columns with raw categoric
+
+
+
 <a id="implement"></a>
 
 ### Implementation
@@ -137,9 +151,9 @@ The remained rows with null values we can not drop due to they have information 
 [PySpark's MLlib](https://spark.apache.org//docs/latest/api/python/pyspark.ml.html) has the most common machine learning classification
 algorithms. 
 In the project we are using three of them:
-- [Random Forest Classifier](#https://spark.apache.org/docs/latest/ml-classification-regression.html#random-forest-classifier)
-- [Logistic Regression](#https://spark.apache.org/docs/latest/ml-classification-regression.html#logistic-regression)
-- [Gradient Boosting Trees](#rhttps://spark.apache.org/docs/latest/ml-classification-regression.html#gradient-boosted-tree-classifier)
+- [Random Forest Classifier](https://spark.apache.org/docs/latest/ml-classification-regression.html#random-forest-classifier)
+- [Logistic Regression](https://spark.apache.org/docs/latest/ml-classification-regression.html#logistic-regression)
+- [Gradient Boosting Trees](rhttps://spark.apache.org/docs/latest/ml-classification-regression.html#gradient-boosted-tree-classifier)
 
 <a id="refine"></a>
 
