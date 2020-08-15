@@ -17,7 +17,7 @@
   - [Reflection](#reflect)
   - [Challenges](#challenges)
 - [Files](#files)
-- [Software Requirements](#requirement)
+- [Software Requirements](#requirements)
 - [Acknowledgement](#acknowledgements)
 
 ***
@@ -203,6 +203,6 @@ This project uses Python 3.6.5 and Spark, Pandas.
 
 <a id="acknowledgements"></a>
 
-## VIII. Acknowledgements
+## VII. Acknowledgements
 
 Thanks to **Udacity** for providing such a project to work on. 
